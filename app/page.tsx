@@ -1,101 +1,102 @@
-import Image from "next/image";
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { Header } from '@/components/header'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100">
+      <Header currentPage="Home" />
+      <main className="flex-1 container mx-auto px-4 py-8">
+        <section className="text-center mb-12 mt-8">
+          <h1 className="text-4xl sm:text-6xl font-bold mb-4 text-blue-400">
+            Welcome to DATCO
+          </h1>
+          <p className="mt-3 text-xl sm:text-2xl text-gray-300">
+            Diamond Asia Trading and Contracting Company
+          </p>
+          <p className="mt-3 text-lg sm:text-xl max-w-3xl mx-auto text-gray-400">
+            Your trusted partner for Electro-Mechanical Contracting and Electro-Material Supply Management. With over 20 years of experience and a commitment to excellence, we deliver top-quality solutions for all your project needs across the Middle East and Asia.
+          </p>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <section className="grid gap-8 sm:grid-cols-2 mt-12">
+          <Card className="bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-blue-400">Contracting</CardTitle>
+              <CardDescription className="text-gray-400">Electro-Mechanical Contracting Services</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Image src="https://placehold.co/300x200.png" alt="Contracting Services" width={300} height={200} className="w-full h-48 object-cover mb-4 rounded-md" />
+              <p className="mb-4 text-gray-300">Our expert team handles a wide range of electro-mechanical contracting projects, from sewage treatment to fire management systems, ensuring top-notch quality and timely delivery.</p>
+              <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+                <Link href="/contracting">Learn More</Link>
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300 border-gray-700">
+            <CardHeader>
+              <CardTitle className="text-blue-400">Supply Management</CardTitle>
+              <CardDescription className="text-gray-400">Electro-Material Supply Management</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Image src="https://placehold.co/300x200.png" alt="Supply Management Services" width={300} height={200} className="w-full h-48 object-cover mb-4 rounded-md" />
+              <p className="mb-4 text-gray-300">We provide high-quality electro-mechanical products and materials to meet all your project requirements efficiently, with a vast inventory and strong supplier relationships.</p>
+              <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
+                <Link href="/supply-management">Explore Products</Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </section>
+
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6 text-center text-blue-400">Why Choose DATCO?</h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            <Card className="bg-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300 border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-blue-400">Experience</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">With over two decades in the industry, we bring unparalleled expertise to every project.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300 border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-blue-400">Quality</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">We maintain the highest standards in both our contracting services and supply management.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-gray-800 shadow-md hover:shadow-lg transition-shadow duration-300 border-gray-700">
+              <CardHeader>
+                <CardTitle className="text-blue-400">Innovation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300">We stay at the forefront of industry advancements to provide cutting-edge solutions.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="border-t border-gray-800 bg-gray-900 mt-16">
+        <div className="container mx-auto px-4 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2023 Diamond Asia Trading and Contracting Company. All rights reserved.
+            </p>
+            <div className="flex space-x-4">
+              <Link href="/about" className="text-gray-400 hover:text-white text-sm">About Us</Link>
+              <Link href="/contact" className="text-gray-400 hover:text-white text-sm">Contact</Link>
+              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm">Privacy Policy</Link>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
