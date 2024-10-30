@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Header } from '@/components/header'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const mechanicalServices = [
   "Sewage & Water Treatment",

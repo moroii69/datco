@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
@@ -16,7 +15,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-  
+
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -35,7 +35,7 @@ export default function Contact() {
 
     toast({
       title: "Message Sent",
-      description: "Thank you for contacting us. We'll get back to you soon!",
+      description: "Thank you for contacting us. We&apos;ll get back to you soon!",
     })
 
     setFormData({ name: '', email: '', subject: '', message: '' })
@@ -55,7 +55,7 @@ export default function Contact() {
             </CardHeader>
             <CardContent>
               <p className="text-lg mb-4 text-gray-300">
-                We're here to help and answer any question you might have. We look forward to hearing from you.
+                We&apos;re here to help and answer any question you might have. We look forward to hearing from you.
               </p>
               
               <div className="mb-6">

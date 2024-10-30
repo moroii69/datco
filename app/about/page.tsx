@@ -13,7 +13,7 @@ const teamMembers = [
     name: "Sarah Chen",
     position: "COO",
     image: "https://placehold.co/600x400.png",
-    bio: "Sarah oversees DATCO's operations, ensuring efficiency and quality in all our projects and supply chain management.",
+    bio: "Sarah oversees DATCO&apos;s operations, ensuring efficiency and quality in all our projects and supply chain management.",
   },
   {
     name: "Mohammed Rahman",
@@ -25,7 +25,7 @@ const teamMembers = [
     name: "Lisa Wong",
     position: "Head of Supply Management",
     image: "https://placehold.co/600x400.png",
-    bio: "Lisa's expertise in supply chain management ensures DATCO provides top-quality products to our clients efficiently.",
+    bio: "Lisa&apos;s expertise in supply chain management ensures DATCO provides top-quality products to our clients efficiently.",
   },
 ]
 
@@ -52,7 +52,7 @@ export default function About() {
           <h2 className="text-2xl font-semibold mb-4 text-blue-400">Our Mission</h2>
           <div className="bg-gray-800 p-6 rounded-lg shadow-md">
             <p className="text-lg mb-4 text-gray-300">
-              At DATCO, our mission is to provide innovative, high-quality electro-mechanical solutions and products that exceed our clients' expectations. We strive to:
+              At DATCO, our mission is to provide innovative, high-quality electro-mechanical solutions and products that exceed our clients&apos; expectations. We strive to:
             </p>
             <ul className="list-disc list-inside text-lg mb-4 text-gray-300 space-y-2">
               <li>Deliver exceptional value through our contracting services and supply management</li>
