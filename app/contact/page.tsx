@@ -5,7 +5,6 @@ import { Header } from '@/components/header'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { useToast } from "@/hooks/use-toast"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Dialog,
@@ -21,13 +20,11 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccessModal, setShowSuccessModal] = useState(false)
-  const { toast } = useToast()
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prevState => ({ ...prevState, [name]: value }))
   }
-  useToast()
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -57,7 +54,7 @@ export default function Contact() {
             </CardHeader>
             <CardContent>
               <p className="text-lg mb-4 text-gray-300">
-                We're here to help and answer any question you might have. We look forward to hearing from you.
+                We&apos;re here to help and answer any question you might have. We look forward to hearing from you.
               </p>
               
               <div className="mb-6">
